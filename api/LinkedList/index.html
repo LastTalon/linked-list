@@ -6,16 +6,16 @@
 <title data-rh="true">LinkedList | Linked List</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://LastTalon.github.io/linked-list/api/LinkedList"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="LinkedList | Linked List"><meta data-rh="true" name="description" content="A doubly-linked list.
 
 Easily inserts and deletes arbitrarily without reordering. A reference to the
-entry to insert or delete at is required. A reference to the front and back of
+entry to insert or delete at is required. References to the front and back of
 the list always exist. When inserting new entries, entry references are
 provided for convenient removal."><meta data-rh="true" property="og:description" content="A doubly-linked list.
 
 Easily inserts and deletes arbitrarily without reordering. A reference to the
-entry to insert or delete at is required. A reference to the front and back of
+entry to insert or delete at is required. References to the front and back of
 the list always exist. When inserting new entries, entry references are
 provided for convenient removal."><link data-rh="true" rel="canonical" href="https://LastTalon.github.io/linked-list/api/LinkedList"><link data-rh="true" rel="alternate" href="https://LastTalon.github.io/linked-list/api/LinkedList" hreflang="en"><link data-rh="true" rel="alternate" href="https://LastTalon.github.io/linked-list/api/LinkedList" hreflang="x-default"><link rel="stylesheet" href="/linked-list/assets/css/styles.fdfd902f.css">
-<link rel="preload" href="/linked-list/assets/js/runtime~main.90595f8d.js" as="script">
-<link rel="preload" href="/linked-list/assets/js/main.a5ed1277.js" as="script">
+<link rel="preload" href="/linked-list/assets/js/runtime~main.1bcf9967.js" as="script">
+<link rel="preload" href="/linked-list/assets/js/main.422778b4.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -23,27 +23,51 @@ provided for convenient removal."><link data-rh="true" rel="canonical" href="htt
 <p>A doubly-linked list.</p>
 <p>
   Easily inserts and deletes arbitrarily without reordering. A reference to the
-  entry to insert or delete at is required. A reference to the front and back of
+  entry to insert or delete at is required. References to the front and back of
   the list always exist. When inserting new entries, entry references are
   provided for convenient removal.
 </p>
 </div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Entry&lt;T&gt;"><code style="text-decoration:none">Entry&lt;T&gt;</code><a href="#Entry&lt;T&gt;" class="hash-link" aria-label="Direct link to Entry&lt;T&gt;" title="Direct link to Entry&lt;T&gt;">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L11"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>Entry&lt;T&gt;<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>remove<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>}</code></div><div>
 <p>An entry in a LinkedList.</p>
 <p>Allows removing this entry from the list. This is a constant time operation.</p>
-</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L47"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L45"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Creates a new LinkedList.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Push"><code style="text-decoration:none">Push</code><a href="#Push" class="hash-link" aria-label="Direct link to Push" title="Direct link to Push">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L57"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Push</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code>) → </code><code class="blue_P4bS">Entry</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
-<p>Pushes a new entry to the back of the List.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Shift"><code style="text-decoration:none">Shift</code><a href="#Shift" class="hash-link" aria-label="Direct link to Shift" title="Direct link to Shift">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L102"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Shift</code><code>(</code><code>) → </code><code class="blue_P4bS">unknown</code></div><div>
-<p>Shifts an entry off of the front of the List.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Pop"><code style="text-decoration:none">Pop</code><a href="#Pop" class="hash-link" aria-label="Direct link to Pop" title="Direct link to Pop">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L116"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Pop</code><code>(</code><code>) → </code><code class="blue_P4bS">unknown</code></div><div>
-<p>Pops an entry off of the back of the List.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="__iter"><span style="font-style:italic">iterating over <!-- -->LinkedList</span><a href="#__iter" class="hash-link" aria-label="Direct link to __iter" title="Direct link to __iter">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L133"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="red_AwJO">for</code>  <span><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code class="blue_P4bS">T</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code class="blue_P4bS">Entry</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><code class="purple_ieR2">)</code> </span> <code class="red_AwJO">in</code>  <code class="green_DgR4">LinkedList</code>  <code class="red_AwJO">do</code></div><div>
-<p>Iterates over all entries in this List.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Push"><code style="text-decoration:none">Push</code><a href="#Push" class="hash-link" aria-label="Direct link to Push" title="Direct link to Push">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L85"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Push</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code>) → </code><code class="blue_P4bS">Entry</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
+<p>Pushes a new entry to the back of this list.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Unshift"><code style="text-decoration:none">Unshift</code><a href="#Unshift" class="hash-link" aria-label="Direct link to Unshift" title="Direct link to Unshift">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L103"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Unshift</code><code>(</code><code>value<!-- -->: </code><code class="blue_P4bS">T</code><code>) → </code><code class="blue_P4bS">Entry</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code></div><div>
+<p>Unshifts a new entry to the front of this list.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Shift"><code style="text-decoration:none">Shift</code><a href="#Shift" class="hash-link" aria-label="Direct link to Shift" title="Direct link to Shift">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L121"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Shift</code><code>(</code><code>) → </code><code class="blue_P4bS">unknown</code></div><div>
+<p>Shifts an entry off of the front of this list.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Pop"><code style="text-decoration:none">Pop</code><a href="#Pop" class="hash-link" aria-label="Direct link to Pop" title="Direct link to Pop">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L133"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">Pop</code><code>(</code><code>) → </code><code class="blue_P4bS">unknown</code></div><div>
+<p>Pops an entry off of the back of this list.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="__iter"><span style="font-style:italic">iterating over <!-- -->LinkedList</span><a href="#__iter" class="hash-link" aria-label="Direct link to __iter" title="Direct link to __iter">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L159"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="red_AwJO">for</code>  <span><code class="blue_P4bS">T</code><code>,</code> </span><span><code class="blue_P4bS">Entry</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code> </span> <code class="red_AwJO">in</code>  <code class="green_DgR4">LinkedList</code>  <code class="red_AwJO">do</code></div><div>
+<p>Iterates over all entries in this list.</p>
 <p>
-  Iteration returns the value stored in each entry, followed by an [Entry]
-  object which can be used to manipulate this entry in the List.
+  Iteration returns the value stored in each entry, followed by an <a href="/linked-list/api/LinkedList#Entry%3CT%3E">Entry</a>
+  object which can be used to manipulate this entry in the list.
 </p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">for</span> value<span class="token punctuation">,</span> entry <span class="token keyword">in</span> list <span class="token keyword">do</span>
+	<span class="token keyword">if</span> value <span class="token operator">==</span> <span class="token string">"foo"</span> <span class="token keyword">then</span>
+		entry<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+</code></pre>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="IterReversed"><code style="text-decoration:none">IterReversed</code><a href="#IterReversed" class="hash-link" aria-label="Direct link to IterReversed" title="Direct link to IterReversed">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/LastTalon/linked-list/blob/main/lib/init.lua#L190"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>LinkedList<!-- -->:</code><code class="green_DgR4">IterReversed</code><code>(</code><code>) → </code><code>(</code><div class="inset_uKQm"><div><code class="blue_P4bS">T</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The value stored in the entry</p>
+</span></span></div><div><code class="blue_P4bS">Entry</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>The entry object</p>
+</span></span></div></div><code>)</code></div><div>
+<p>Iterates over all entries in this list in reverse order.</p>
+<p>
+  Iteration returns the value stored in each entry, followed by an <a href="/linked-list/api/LinkedList#Entry%3CT%3E">Entry</a>
+  object which can be used to manipulate this entry in the list.
+</p>
+<pre class="language-lua"><code class="language-lua"><span class="token keyword">for</span> value<span class="token punctuation">,</span> entry <span class="token keyword">in</span> list<span class="token punctuation">:</span><span class="token function">IterReversed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">do</span>
+	<span class="token keyword">if</span> value <span class="token operator">==</span> <span class="token string">"foo"</span> <span class="token keyword">then</span>
+		entry<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">end</span>
+<span class="token keyword">end</span>
+</code></pre>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
         {
@@ -53,13 +77,13 @@ provided for convenient removal."><link data-rh="true" rel="canonical" href="htt
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 47,
+                &quot;line&quot;: 45,
                 &quot;path&quot;: &quot;lib/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Push&quot;,
-            &quot;desc&quot;: &quot;Pushes a new entry to the back of the List.&quot;,
+            &quot;desc&quot;: &quot;Pushes a new entry to the back of this list.&quot;,
             &quot;params&quot;: [
                 {
                     &quot;name&quot;: &quot;value&quot;,
@@ -75,13 +99,35 @@ provided for convenient removal."><link data-rh="true" rel="canonical" href="htt
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 57,
+                &quot;line&quot;: 85,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Unshift&quot;,
+            &quot;desc&quot;: &quot;Unshifts a new entry to the front of this list.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;value&quot;,
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Entry&lt;T&gt;\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 103,
                 &quot;path&quot;: &quot;lib/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Shift&quot;,
-            &quot;desc&quot;: &quot;Shifts an entry off of the front of the List.&quot;,
+            &quot;desc&quot;: &quot;Shifts an entry off of the front of this list.&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -91,13 +137,13 @@ provided for convenient removal."><link data-rh="true" rel="canonical" href="htt
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 102,
+                &quot;line&quot;: 121,
                 &quot;path&quot;: &quot;lib/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;Pop&quot;,
-            &quot;desc&quot;: &quot;Pops an entry off of the back of the List.&quot;,
+            &quot;desc&quot;: &quot;Pops an entry off of the back of this list.&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
@@ -107,23 +153,47 @@ provided for convenient removal."><link data-rh="true" rel="canonical" href="htt
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 116,
+                &quot;line&quot;: 133,
                 &quot;path&quot;: &quot;lib/init.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;__iter&quot;,
-            &quot;desc&quot;: &quot;Iterates over all entries in this List.\n\nIteration returns the value stored in each entry, followed by an [Entry]\nobject which can be used to manipulate this entry in the List.&quot;,
+            &quot;desc&quot;: &quot;Iterates over all entries in this list.\n\nIteration returns the value stored in each entry, followed by an [Entry&lt;T&gt;]\nobject which can be used to manipulate this entry in the list.\n\n```lua\nfor value, entry in list do\n\tif value == \&quot;foo\&quot; then\n\t\tentry.remove()\n\tend\nend\n```&quot;,
             &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;&lt;T&gt;() -&gt; (T, Entry&lt;T&gt;)\n&quot;
+                    &quot;lua_type&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;Entry&lt;T&gt;&quot;
                 }
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 133,
+                &quot;line&quot;: 159,
+                &quot;path&quot;: &quot;lib/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;IterReversed&quot;,
+            &quot;desc&quot;: &quot;Iterates over all entries in this list in reverse order.\n\nIteration returns the value stored in each entry, followed by an [Entry&lt;T&gt;]\nobject which can be used to manipulate this entry in the list.\n\n```lua\nfor value, entry in list:IterReversed() do\n\tif value == \&quot;foo\&quot; then\n\t\tentry.remove()\n\tend\nend\n```&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The value stored in the entry&quot;,
+                    &quot;lua_type&quot;: &quot;T&quot;
+                },
+                {
+                    &quot;desc&quot;: &quot;The entry object&quot;,
+                    &quot;lua_type&quot;: &quot;Entry&lt;T&gt;&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 190,
                 &quot;path&quot;: &quot;lib/init.lua&quot;
             }
         }
@@ -147,13 +217,13 @@ provided for convenient removal."><link data-rh="true" rel="canonical" href="htt
         }
     ],
     &quot;name&quot;: &quot;LinkedList&quot;,
-    &quot;desc&quot;: &quot;A doubly-linked list.\n\nEasily inserts and deletes arbitrarily without reordering. A reference to the\nentry to insert or delete at is required. A reference to the front and back of\nthe list always exist. When inserting new entries, entry references are\nprovided for convenient removal.&quot;,
+    &quot;desc&quot;: &quot;A doubly-linked list.\n\nEasily inserts and deletes arbitrarily without reordering. A reference to the\nentry to insert or delete at is required. References to the front and back of\nthe list always exist. When inserting new entries, entry references are\nprovided for convenient removal.&quot;,
     &quot;source&quot;: {
         &quot;line&quot;: 39,
         &quot;path&quot;: &quot;lib/init.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Entry&lt;T&gt;" class="table-of-contents__link toc-highlight">Entry<t></t></a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#__iter" class="table-of-contents__link toc-highlight">:__iter</a></li><li><a href="#Pop" class="table-of-contents__link toc-highlight">:Pop</a></li><li><a href="#Push" class="table-of-contents__link toc-highlight">:Push</a></li><li><a href="#Shift" class="table-of-contents__link toc-highlight">:Shift</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Lucas Gangstad. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/linked-list/assets/js/runtime~main.90595f8d.js"></script>
-<script src="/linked-list/assets/js/main.a5ed1277.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#Entry&lt;T&gt;" class="table-of-contents__link toc-highlight">Entry<t></t></a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#__iter" class="table-of-contents__link toc-highlight">:__iter</a></li><li><a href="#IterReversed" class="table-of-contents__link toc-highlight">:IterReversed</a></li><li><a href="#Pop" class="table-of-contents__link toc-highlight">:Pop</a></li><li><a href="#Push" class="table-of-contents__link toc-highlight">:Push</a></li><li><a href="#Shift" class="table-of-contents__link toc-highlight">:Shift</a></li><li><a href="#Unshift" class="table-of-contents__link toc-highlight">:Unshift</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Lucas Gangstad. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+<script src="/linked-list/assets/js/runtime~main.1bcf9967.js"></script>
+<script src="/linked-list/assets/js/main.422778b4.js"></script>
 </body>
 </html>
