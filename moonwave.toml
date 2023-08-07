@@ -1,0 +1,11 @@
+gitSourceBranch = "main"
+
+[docusaurus]
+title = "Linked List"
+tagline = "A Luau linked list implementation"
+
+[home]
+enabled = true
+
+[footer]
+copyright = "Copyright © 2023 Lucas Gangstad. Built with Moonwave and Docusaurus."
