@@ -30,7 +30,7 @@ type Node<T> = {
 	A doubly-linked list.
 
 	Easily inserts and deletes arbitrarily without reordering. A reference to the
-	entry to insert or delete at is required. A reference to the front and back of
+	entry to insert or delete at is required. References to the front and back of
 	the list always exist. When inserting new entries, entry references are
 	provided for convenient removal.
 
@@ -41,20 +41,13 @@ LinkedList.__index = LinkedList
 
 --[=[
 	Creates a new LinkedList.
-
-	@within LinkedList
 ]=]
 function LinkedList.new()
 	local self = setmetatable({}, LinkedList)
 	return self
 end
 
---[=[
-	Pushes a new entry to the back of the List.
-
-	@within LinkedList
-]=]
-function LinkedList:Push<T>(value: T): Entry<T>
+local function createNode<T>(list: typeof(LinkedList.new()), value: T)
 	local node: Node<T>?
 	local entry = {
 		remove = function()
@@ -65,13 +58,13 @@ function LinkedList:Push<T>(value: T): Entry<T>
 			if node.prev then
 				node.prev.next = node.next
 			else
-				self.front = node.next
+				list.front = node.next
 			end
 
 			if node.next then
 				node.next.prev = node.prev
 			else
-				self.back = node.prev
+				list.back = node.prev
 			end
 
 			node = nil
@@ -80,9 +73,19 @@ function LinkedList:Push<T>(value: T): Entry<T>
 
 	node = {
 		value = value,
-		prev = self.back,
 		entry = entry,
 	}
+
+	return node
+end
+
+--[=[
+	Pushes a new entry to the back of this list.
+]=]
+function LinkedList:Push<T>(value: T): Entry<T>
+	local node: Node<T> = createNode(self, value)
+
+	node.prev = self.back
 
 	if self.back then
 		self.back.next = node
@@ -91,13 +94,29 @@ function LinkedList:Push<T>(value: T): Entry<T>
 	end
 	self.back = node
 
-	return entry
+	return node.entry
 end
 
 --[=[
-	Shifts an entry off of the front of the List.
+	Unshifts a new entry to the front of this list.
+]=]
+function LinkedList:Unshift<T>(value: T): Entry<T>
+	local node: Node<T> = createNode(self, value)
 
-	@within LinkedList
+	node.next = self.front
+
+	if self.front then
+		self.front.prev = node
+	else
+		self.back = node
+	end
+	self.front = node
+
+	return node.entry
+end
+
+--[=[
+	Shifts an entry off of the front of this list.
 ]=]
 function LinkedList:Shift(): unknown
 	local node = self.front
@@ -109,9 +128,7 @@ function LinkedList:Shift(): unknown
 end
 
 --[=[
-	Pops an entry off of the back of the List.
-
-	@within LinkedList
+	Pops an entry off of the back of this list.
 ]=]
 function LinkedList:Pop(): unknown
 	local node = self.back
@@ -123,12 +140,21 @@ function LinkedList:Pop(): unknown
 end
 
 --[=[
-	Iterates over all entries in this List.
+	Iterates over all entries in this list.
 
-	Iteration returns the value stored in each entry, followed by an [Entry]
-	object which can be used to manipulate this entry in the List.
+	Iteration returns the value stored in each entry, followed by an [Entry<T>]
+	object which can be used to manipulate this entry in the list.
 
-	@within LinkedList
+	```lua
+	for value, entry in list do
+		if value == "foo" then
+			entry.remove()
+		end
+	end
+	```
+
+	@return T
+	@return Entry<T>
 ]=]
 function LinkedList:__iter(): <T>() -> (T, Entry<T>)
 	local node: UnknownNode? = self.front
@@ -140,6 +166,37 @@ function LinkedList:__iter(): <T>() -> (T, Entry<T>)
 
 		local currentNode = node
 		node = node.next
+		return currentNode.value, currentNode.entry
+	end
+end
+
+--[=[
+	Iterates over all entries in this list in reverse order.
+
+	Iteration returns the value stored in each entry, followed by an [Entry<T>]
+	object which can be used to manipulate this entry in the list.
+
+	```lua
+	for value, entry in list:IterReversed() do
+		if value == "foo" then
+			entry.remove()
+		end
+	end
+	```
+
+	@return T -- The value stored in the entry
+	@return Entry<T> -- The entry object
+]=]
+function LinkedList:IterReversed(): <T>() -> (T, Entry<T>)
+	local node: UnknownNode? = self.back
+
+	return function()
+		if not node then
+			return
+		end
+
+		local currentNode = node
+		node = node.prev
 		return currentNode.value, currentNode.entry
 	end
 end
