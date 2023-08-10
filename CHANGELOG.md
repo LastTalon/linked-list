@@ -12,4 +12,10 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 
 ### Added
 
+- `LinkedList` class
+- Pushing, popping, shifting, and unshifting elements
+- Forward and reverse iteration
+- `Entry` for O(1) operations at arbitrary list positions
+  - Removal of entries (does not cause iteration order to break)
+
 [unreleased]: https://github.com/lasttalon/linked-list/compare/v0.1.0...HEAD
