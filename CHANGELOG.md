@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 - `LinkedList` class
 - Pushing, popping, shifting, and unshifting elements
 - Forward and reverse iteration
-- `Entry` for O(1) operations at arbitrary list positions
-  - Removal of entries (does not cause iteration order to break)
+- `Entry` for constant time complexity operations at arbitrary list positions
+  - Supports removal of entries without affecting the iteration order
 
 [unreleased]: https://github.com/lasttalon/linked-list/compare/v0.1.0...HEAD
