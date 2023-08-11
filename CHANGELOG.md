@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 
 ## [Unreleased]
 
+## [0.1.0] - 2023-08-11
+
 ### Added
 
 - `LinkedList` class
@@ -19,3 +21,4 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
   - Supports removal of entries without affecting the iteration order
 
 [unreleased]: https://github.com/lasttalon/linked-list/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/lasttalon/linked-list/releases/tag/v0.1.0
