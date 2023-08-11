@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog][kac], and this project adheres to
 ### Added
 
 - `LinkedList` class
-- Pushing, popping, shifting, and unshifting elements
+- Pushing, popping, shifting, unshifting, and peeking elements
 - Forward and reverse iteration
 - `Entry` for constant time complexity operations at arbitrary list positions
   - Supports removal of entries without affecting the iteration order
