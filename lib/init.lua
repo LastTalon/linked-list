@@ -140,6 +140,46 @@ function LinkedList:Pop(): unknown
 end
 
 --[=[
+  Returns the value of the first element in the list without removing it.
+]=]
+function LinkedList:Peek(): unknown
+	if self.front then
+		return self.front.value
+	end
+	return
+end
+
+--[=[
+	Returns the value of the last element in the list without removing it.
+]=]
+function LinkedList:PeekBack(): unknown
+	if self.back then
+		return self.back.value
+	end
+	return
+end
+
+--[=[
+  Returns the first entry in the list without removing it.
+]=]
+function LinkedList:PeekEntry(): unknown
+	if self.front then
+		return self.front.entry
+	end
+	return
+end
+
+--[=[
+	Returns the last entry in the list without removing it.
+]=]
+function LinkedList:PeekBackEntry(): unknown
+	if self.back then
+		return self.back.entry
+	end
+	return
+end
+
+--[=[
 	Iterates over all entries in this list.
 
 	Iteration returns the value stored in each entry, followed by an [Entry<T>]

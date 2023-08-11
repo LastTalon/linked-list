@@ -149,6 +149,92 @@ return function()
 			end)
 		end)
 
+		describe("Peek", function()
+			it("should return nil for an empty list", function()
+				local list = LinkedList.new()
+
+				local value = list:Peek()
+
+				expect(value).to.equal(nil)
+			end)
+
+			it("should return the first element of a list", function()
+				local list = LinkedList.new()
+
+				list:Push(1)
+				list:Push(2)
+
+				local value = list:Peek()
+
+				expect(value).to.equal(1)
+			end)
+		end)
+
+		describe("PeekBack", function()
+			it("should return nil for an empty list", function()
+				local list = LinkedList.new()
+
+				local value = list:PeekBack()
+
+				expect(value).to.equal(nil)
+			end)
+
+			it("should return the last element of a list", function()
+				local list = LinkedList.new()
+
+				list:Push(1)
+				list:Push(2)
+
+				local value = list:PeekBack()
+
+				expect(value).to.equal(2)
+			end)
+		end)
+
+		describe("PeekEntry", function()
+			it("should return nil for an empty list", function()
+				local list = LinkedList.new()
+
+				local entry = list:PeekEntry()
+
+				expect(entry).to.equal(nil)
+			end)
+
+			it("should return the first entry of a list", function()
+				local list = LinkedList.new()
+
+				list:Push(1)
+				list:Push(2)
+
+				local entry = list:PeekEntry()
+
+				expect(entry).to.be.ok()
+				expect(entry).to.equal(list.front.entry)
+			end)
+		end)
+
+		describe("PeekBackEntry", function()
+			it("should return nil for an empty list", function()
+				local list = LinkedList.new()
+
+				local entry = list:PeekBackEntry()
+
+				expect(entry).to.equal(nil)
+			end)
+
+			it("should return the last entry of a list", function()
+				local list = LinkedList.new()
+
+				list:Push(1)
+				list:Push(2)
+
+				local entry = list:PeekBackEntry()
+
+				expect(entry).to.be.ok()
+				expect(entry).to.equal(list.back.entry)
+			end)
+		end)
+
 		describe("__iter", function()
 			it("should iterate over an empty list", function()
 				local list = LinkedList.new()
