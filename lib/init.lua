@@ -162,7 +162,7 @@ end
 --[=[
   Returns the first entry in the list without removing it.
 ]=]
-function LinkedList:PeekEntry(): unknown
+function LinkedList:PeekEntry(): Entry<unknown>?
 	if self.front then
 		return self.front.entry
 	end
@@ -172,7 +172,7 @@ end
 --[=[
 	Returns the last entry in the list without removing it.
 ]=]
-function LinkedList:PeekBackEntry(): unknown
+function LinkedList:PeekBackEntry(): Entry<unknown>?
 	if self.back then
 		return self.back.entry
 	end
